@@ -68,6 +68,15 @@ As a Contoso employee, I want to search for documents by title, tags, or content
 1. **Given** a user searches for a document by title, **When** they enter search terms, **Then** matching documents are displayed.
 2. **Given** a user searches using tags, **When** they enter tag keywords, **Then** documents with those tags appear in results.
 
+## Clarifications
+
+### Session 2026-03-20
+
+- Q: What external service or library will be used for virus scanning of uploaded files? → A: Windows Defender API
+- Q: How will document lifecycle be managed (deletion and archiving)? → A: Manual deletion by document owner
+- Q: What accessibility standards must the document upload feature comply with? → A: No specific accessibility requirements
+- Q: What regulatory or compliance standards apply to document storage and management? → A: No specific compliance standards
+
 ### Edge Cases
 
 - What happens when multiple users upload files simultaneously?
@@ -87,7 +96,7 @@ As a Contoso employee, I want to search for documents by title, tags, or content
 - **FR-005**: System MUST require document title and category when uploading
 - **FR-006**: System MUST allow optional description, associated project, and tags
 - **FR-007**: System MUST automatically capture upload date, user, file size, and MIME type
-- **FR-008**: System MUST scan uploaded files for viruses and malware
+- **FR-008**: System MUST scan uploaded files for viruses and malware using Windows Defender API
 - **FR-009**: System MUST reject unsupported file types with clear error messages
 - **FR-010**: System MUST store files securely outside wwwroot with unique paths
 - **FR-011**: System MUST provide "My Documents" view with sorting and filtering
@@ -95,6 +104,7 @@ As a Contoso employee, I want to search for documents by title, tags, or content
 - **FR-013**: System MUST enforce role-based access controls (Employee, Team Lead, Project Manager, Administrator)
 - **FR-014**: System MUST implement search functionality by title, tags, and metadata
 - **FR-015**: System MUST provide download endpoints with authorization checks
+- **FR-016**: System MUST allow document owners to delete their uploaded documents
 
 ### Key Entities *(include if feature involves data)*
 
