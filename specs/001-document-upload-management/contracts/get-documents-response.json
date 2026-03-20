@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Get Documents Response",
+  "description": "Response payload for retrieving user's documents",
+  "type": "object",
+  "properties": {
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Document ID"
+          },
+          "title": {
+            "type": "string",
+            "description": "Document title"
+          },
+          "description": {
+            "type": "string",
+            "description": "Document description"
+          },
+          "category": {
+            "type": "string",
+            "description": "Document category"
+          },
+          "projectId": {
+            "type": "integer",
+            "description": "Associated project ID"
+          },
+          "projectName": {
+            "type": "string",
+            "description": "Associated project name"
+          },
+          "tags": {
+            "type": "string",
+            "description": "Document tags"
+          },
+          "fileSize": {
+            "type": "integer",
+            "description": "File size in bytes"
+          },
+          "mimeType": {
+            "type": "string",
+            "description": "MIME type"
+          },
+          "scanStatus": {
+            "type": "string",
+            "enum": ["Pending", "Clean", "Infected", "Failed"],
+            "description": "Virus scan status"
+          },
+          "scanDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Scan completion timestamp"
+          },
+          "uploadDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Upload timestamp"
+          },
+          "uploadedBy": {
+            "type": "string",
+            "description": "Uploader's display name"
+          }
+        },
+        "required": ["id", "title", "category", "fileSize", "mimeType", "uploadDate", "uploadedBy"]
+      }
+    },
+    "totalCount": {
+      "type": "integer",
+      "description": "Total number of documents"
+    },
+    "page": {
+      "type": "integer",
+      "description": "Current page number"
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "Items per page"
+    }
+  },
+  "required": ["documents", "totalCount"]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Upload Document Response",
+  "description": "Response payload for successful document upload",
+  "type": "object",
+  "properties": {
+    "documentId": {
+      "type": "integer",
+      "description": "Unique document ID"
+    },
+    "title": {
+      "type": "string",
+      "description": "Document title"
+    },
+    "fileSize": {
+      "type": "integer",
+      "description": "File size in bytes"
+    },
+    "uploadDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Upload timestamp"
+    },
+    "message": {
+      "type": "string",
+      "description": "Success message"
+    }
+  },
+  "required": ["documentId", "title", "fileSize", "uploadDate", "message"]
+}
