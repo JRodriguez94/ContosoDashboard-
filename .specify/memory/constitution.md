@@ -1,50 +1,41 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report (2026-03-20):
+- Version change: initial → 1.0.0
+- List of modified principles: none (initial creation)
+- Added sections: Core Principles (5), Technology Standards, Development Workflow, Governance
+- Removed sections: none
+- Templates requiring updates: none
+- Follow-up TODOs: none
+-->
+# ContosoDashboard Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development
+Every feature must begin with a detailed specification document that clearly defines requirements, user stories, acceptance criteria, and success metrics. Specifications serve as the single source of truth for development.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Plan-First Implementation
+Implementation must follow a comprehensive plan that outlines technical architecture, component design, data models, and integration points. Plans ensure systematic and traceable development.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Task-Based Execution
+Features are decomposed into small, actionable tasks with clear dependencies, deliverables, and ownership. Tasks enable parallel development and incremental progress tracking.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Test-First Development
+Automated tests are written before code implementation. Unit tests, integration tests, and acceptance tests ensure quality, prevent regressions, and validate functionality.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Iterative Refinement
+Development proceeds in iterations with regular reviews, feedback incorporation, and adjustments. Each iteration produces a potentially shippable increment.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technology Standards
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+The application uses .NET 8.0 or later, Blazor Server for UI, Entity Framework Core for data access, and follows Microsoft coding guidelines and security best practices. All code must be compatible with .NET 8+ and use modern C# features.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Use GitHub Spec Kit agents (/speckit.specify, /speckit.plan, /speckit.tasks, /speckit.implement) for structured development. All changes require code reviews, automated testing, and compliance with this constitution. Branches follow the pattern [###-feature-name].
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other practices and guides all project decisions. Amendments require documentation, team consensus, and a migration plan for existing code. All pull requests must verify compliance with these principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-03-20 | **Last Amended**: 2026-03-20
